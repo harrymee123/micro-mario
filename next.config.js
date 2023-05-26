@@ -1,29 +1,29 @@
-const { withModuleFederation } = require("@module-federation/nextjs-mf");
+const NextFederationPlugin = require("@module-federation/nextjs-mf");
 module.exports = {
   basePath: "/mario",
   future: { webpack5: true },
   images: {
     domains: ["upload.wikimedia.org"],
   },
-  webpack: (config, options) => {
-    const { isServer } = options;
-    const mfConf = {
-      mergeRuntime: true, //experimental
-      name: "marioApp",
-      library: {
-        type: config.output.libraryTarget,
+  webpack: (config) => {
+    config.plugins.push(
+      new NextFederationPlugin({
         name: "marioApp",
-      },
-      filename: "static/runtime/remoteEntry.js",
-      remotes: {
-        luigiApp: "luigiApp",
-      },
-      exposes: {
-        "./mario": "./components/mario",
-      },
-    };
+        library: {
+          type: config.output.libraryTarget,
+          name: "marioApp",
+        },
+        filename: "static/runtime/remoteEntry.js",
+        remotes: {
+          luigiApp: "luigiApp",
+        },
+        exposes: {
+          "./mario": "./components/mario",
+        },
+      })
+    );
+
     config.cache = false;
-    withModuleFederation(config, options, mfConf);
 
     return config;
   },
