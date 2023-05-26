@@ -12,8 +12,11 @@ const Mario = () => {
       <h1 className={styles.title}>G'day! I'ma Mario.</h1>
       <span>
         I'm hosted at
-        <a target="_blank" href="http://localhost:3001/mario">
-          http://localhost:3001/mario
+        <a
+          target="_blank"
+          href="https://micro-mario-46q24z3yb-harrymee94-gmailcom.vercel.app/mario"
+        >
+          https://micro-mario-46q24z3yb-harrymee94-gmailcom.vercel.app/mario
         </a>
       </span>
     </main>

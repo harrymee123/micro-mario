@@ -8,7 +8,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <script src="http://localhost:3002/luigi/_next/static/runtime/app1RemoteEntry.js" />
+        <script src="https://micro-luigi-fclro5wit-harrymee94-gmailcom.vercel.app/luigi/_next/static/runtime/app1RemoteEntry.js" />
         <Head />
         <body>
           <Main />
