@@ -14,7 +14,7 @@ module.exports = {
         type: config.output.libraryTarget,
         name: "app2",
       },
-      filename: "static/runtime/app2remoteEntry.js",
+      filename: "static/runtime/remoteEntry.js",
       remotes: {
         app1: "app1",
       },
