@@ -3,7 +3,7 @@ import Mario from "../components/mario";
 import styles from "../styles/Home.module.css";
 import dynamic from "next/dynamic";
 
-const RemoteLuigi = dynamic(() => import("app1/luigi"), { ssr: false });
+const RemoteLuigi = dynamic(() => import("luigiApp/luigi"), { ssr: false });
 
 export default function Home() {
   return (
