@@ -8,7 +8,6 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <script src="https://micro-luigi.vercel.app/luigi/_next/static/runtime/remoteEntry.js" />
         <Head />
         <body>
           <Main />
