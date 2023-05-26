@@ -9,7 +9,7 @@ const Mario = () => {
         width={240}
         height={413}
       />
-      <h1 className={styles.title}>G'day! I'ma Mario.</h1>
+      <h1 className={styles.title}>G'day! I'ma Mario. CAHNGED</h1>
       <span>
         I'm hosted at
         <a target="_blank" href="https://micro-mario.vercel.app/mario">
